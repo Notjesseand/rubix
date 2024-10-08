@@ -7,7 +7,7 @@ import { FaYoutube } from "react-icons/fa";
 import Accordion from "./ui/accordion";
 
 const Footer = () => {
-  const faqs = [
+  const informationCompany = [
     {
       title: "Information Company ",
       content: [
@@ -27,14 +27,37 @@ const Footer = () => {
       ],
     },
   ];
+
+  const faqs = [
+    {
+      title: "More from RUBIX",
+      content: [
+        "About Rubix",
+
+        "Our Guarantees",
+
+        "Terms and Conditions",
+
+        "Privacy Policy",
+
+        "Return Policy",
+
+        "Delivery & Return",
+
+        "Sitemap",
+      ],
+    },
+  ];
   return (
     <div className=" bg-[#1a1a1a] mt-20 px-6 sm:px-10 sm:pt-10 text-white font-montserrat pb-44">
       {/* PC */}
-      <div className="grid md:grid-cols-4 pt-10 gap-x-4">
+      <div className="grid md:grid-cols-4 pt-6 sm:pt-0 gap-x-4">
         {/* rubix logo , 1/4*/}
         <div>
-          <p className="font-bold text-3xl text-white font-montserrat">RUBIX</p>
-          <div className="flex text-white text-3xl justify-between mt-6 pr-6 max-w-[50vw]">
+          <p className="font-bold text-xl sm:text-3xl text-white font-montserrat">
+            RUBIX
+          </p>
+          <div className="flex text-white text-xl sm:text-3xl gap-x-4 sm:justify-between mt-6 pr-6 sm:max-w-[50vw]">
             <FaFacebookF />
             <FaTwitter />
             <FaInstagram />
@@ -44,25 +67,47 @@ const Footer = () => {
         </div>
         {/* Information Company */}
         <div>
-          <p className="font-semibold text-base">Information Company</p>
-          <div className="text-[#8e8e8e] pt-2 space-y-2 text-sm hidden md:block">
-            <p>Your Account</p>
-            <p>Track Your Order</p>
-            <p>FAQs</p>
-            <p>Payment Methods</p>
-            <p>Shipping Guide</p>
-            <p>Products Support</p>
-            <p>Gift Card Balance</p>
+          <div className="text-[#8e8e8e] pt-2 space-y-3 text-sm hidden md:block">
+            <p className="font-semibold text-base text-white">
+              Information Company
+            </p>
+            <p className="cursor-pointer">Your Account</p>
+            <p className="cursor-pointer">Track Your Order</p>
+            <p className="cursor-pointer">FAQs</p>
+            <p className="cursor-pointer">Payment Methods</p>
+            <p className="cursor-pointer">Shipping Guide</p>
+            <p className="cursor-pointer">Products Support</p>
+            <p className="cursor-pointer">Gift Card Balance</p>
           </div>
 
-          <div className="mt-5 md:hidden">
-            {faqs.map((faq, index) => (
+          <div className="mt-8 md:hidden">
+            {informationCompany.map((faq, index) => (
               <Accordion key={index} title={faq.title} content={faq.content} />
             ))}
           </div>
         </div>
 
         {/* more from RUBIX */}
+        <div>
+          <div className="text-[#8e8e8e] pt-2 space-y-3 text-sm hidden md:block">
+            <p className="font-semibold text-base text-white">
+              More from RUBIX
+            </p>
+            <p className="cursor-pointer">About Rubix</p>
+            <p className="cursor-pointer">Our Guarantees</p>
+            <p className="cursor-pointer">Terms and Conditions</p>
+            <p className="cursor-pointer">Privacy Policy</p>
+            <p className="cursor-pointer">Return Policy</p>
+            <p className="cursor-pointer">Delivery & Return</p>
+            <p className="cursor-pointer">Sitemap</p>
+          </div>
+
+          <div className="mt-4 md:hidden">
+            {faqs.map((faq, index) => (
+              <Accordion key={index} title={faq.title} content={faq.content} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
