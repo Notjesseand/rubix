@@ -113,7 +113,9 @@ const Footer = () => {
         {/* let's talk */}
         <div>
           <div className="text-[#8e8e8e] pt-2 space-y-3 text-sm hidden md:block">
-            <p className="font-semibold text-base text-white">Let's talk</p>
+            <p className="font-semibold text-base text-white">
+              Let&apos;s talk
+            </p>
             <p className="cursor-pointer flex items-center gap-2 mt-1">
               <TfiHeadphoneAlt className="text-lg" /> +391 (0)35 2568 4593
             </p>
