@@ -7,7 +7,7 @@ import { FaYoutube } from "react-icons/fa";
 import Accordion from "./ui/accordion";
 
 const Footer = () => {
-  const ajaj = "";
+  const ajajq = "";
   const faqs = [
     {
       title: "Information Company ",
