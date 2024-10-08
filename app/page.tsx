@@ -96,7 +96,7 @@ const Page = () => {
           <p className="text-center text-base sm:text-lg font-custom font-extralight text-gray-500">
             Top sale in this week
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 sm:px-12">
             {trending.map((item, index) => (
               <div
                 key={index}
@@ -203,7 +203,7 @@ const Page = () => {
             Read our curated library of blogposts
           </p>
 
-          <div className="grid lg:grid-cols-3 px-10 pt-12 gap-2 lg:gap-x 4 gap-y-6">
+          <div className="grid lg:grid-cols-3 px-5 sm:px-10 pt-12 gap-2 lg:gap-x 4 gap-y-6">
             <div className="">
               <img
                 src="/blog1.webp"
