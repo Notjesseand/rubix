@@ -5,6 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import Accordion from "./ui/accordion";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 
 const Footer = () => {
   const informationCompany = [
@@ -106,6 +107,17 @@ const Footer = () => {
             {faqs.map((faq, index) => (
               <Accordion key={index} title={faq.title} content={faq.content} />
             ))}
+          </div>
+        </div>
+
+        {/* let's talk */}
+        <div>
+          <div className="text-[#8e8e8e] pt-2 space-y-3 text-sm hidden md:block">
+            <p className="font-semibold text-base text-white">Let's talk</p>
+            <p className="cursor-pointer flex items-center gap-2 mt-1">
+              <TfiHeadphoneAlt className="text-lg" /> +391 (0)35 2568 4593
+            </p>
+            <p>@jessennorom@gmail.com</p>
           </div>
         </div>
       </div>
