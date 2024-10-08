@@ -113,7 +113,7 @@ const Footer = () => {
 
         {/* let's talk */}
         <div>
-          <div className="text-[#8e8e8e] pt-2 space-y-3 text-sm hidden md:block">
+          <div className="text-[#8e8e8e] pt-6 sm:pt-2 space-y-3 text-sm ">
             <p className="font-semibold text-base text-white">
               Let&apos;s talk
             </p>
@@ -123,7 +123,7 @@ const Footer = () => {
             <p>@jessennorom@gmail.com</p>
           </div>
           {/* find us */}
-          <div className="text-[#8e8e8e] pt-5 space-y-3 text-sm hidden md:block ">
+          <div className="text-[#8e8e8e] pt-5 space-y-3 text-sm ">
             <p className="font-semibold text-base text-white">Find Us</p>
             <p className="cursor-pointer flex items-center gap-2 mt-1">
               <MdLocationOn className="text-lg" /> Nsukka, Nigeria
