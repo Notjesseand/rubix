@@ -6,6 +6,7 @@ import { FaPinterest } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import Accordion from "./ui/accordion";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
+import { MdLocationOn } from "react-icons/md";
 
 const Footer = () => {
   const informationCompany = [
@@ -50,7 +51,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className=" bg-[#1a1a1a] mt-20 px-6 sm:px-10 sm:pt-10 text-white font-montserrat pb-44">
+    <div className=" bg-[#1a1a1a] mt-20 px-6 sm:px-10 sm:pt-10 text-white font-montserrat pb-10">
       {/* PC */}
       <div className="grid md:grid-cols-4 pt-6 sm:pt-0 gap-x-4">
         {/* rubix logo , 1/4*/}
@@ -120,6 +121,13 @@ const Footer = () => {
               <TfiHeadphoneAlt className="text-lg" /> +391 (0)35 2568 4593
             </p>
             <p>@jessennorom@gmail.com</p>
+          </div>
+          {/* find us */}
+          <div className="text-[#8e8e8e] pt-5 space-y-3 text-sm hidden md:block ">
+            <p className="font-semibold text-base text-white">Find Us</p>
+            <p className="cursor-pointer flex items-center gap-2 mt-1">
+              <MdLocationOn className="text-lg" /> Nsukka, Nigeria
+            </p>
           </div>
         </div>
       </div>
