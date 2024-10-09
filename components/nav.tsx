@@ -30,11 +30,11 @@ const Nav = () => {
       </h1>
 
       <div className="hidden lg:flex font-montserrat items-center gap-9 text-base">
-        <p>Home</p>
-        <p>Shop</p>
-        <p>Collections</p>
-        <p>Blogs</p>
-        <p>Contact Us</p>
+        <p className="cursor-pointer">Home</p>
+        <p className="cursor-pointer">Shop</p>
+        <p className="cursor-pointer">Collections</p>
+        <p className="cursor-pointer">Blogs</p>
+        <p className="cursor-pointer">Contact Us</p>
       </div>
 
       <div className="flex items-center text-2xl gap-3">
