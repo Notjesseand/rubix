@@ -17,7 +17,6 @@ import { PiHandbagLight } from "react-icons/pi";
 import { IoSearchOutline } from "react-icons/io5";
 
 import { trending } from "@/api/data";
-const jaja = "";
 const TrendingCarousel = () => {
   const pagination = {
     clickable: true,
@@ -73,7 +72,7 @@ const TrendingCarousel = () => {
               }}
               className={`bg-contain hover:scale-95 h-full w-full flex transition-all duration-300 z-50 bg-no-repeat bg-center`}
             >
-              <div className="absolute right-2 cursor-pointer top-5 -z-30">
+              <div className="absolute right-2 cursor-pointer top-5 z-30">
                 {/* add to cart */}
                 <div className="h-10 w-10 sm:h-11 sm:w-11  rounded text-2xl bg-white flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold">
                   <PiHandbagLight />

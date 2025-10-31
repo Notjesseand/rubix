@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { BsPerson } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
@@ -25,9 +26,12 @@ const Nav = () => {
       }`}
     >
       {/* Navbar content */}
+      <Link href="/">
+      
       <h1 className="font-nunito text-2xl sm:text-3xl font-extrabold tracking-widest">
         RUBIX
       </h1>
+      </Link>
 
       <div className="hidden lg:flex font-montserrat items-center gap-9 text-base">
         <p className="cursor-pointer">Home</p>
