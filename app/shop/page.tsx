@@ -403,7 +403,7 @@ export default function Page() {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 gap-y-24 sm:px-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 gap-y-24 sm:px-6 py-14">
         {products.length > 0 ? (
           products.map((product) => (
             <ProductCard
