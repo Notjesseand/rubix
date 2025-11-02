@@ -354,7 +354,7 @@
 "use client";
 import { useState } from "react";
 import { PiHandbagLight } from "react-icons/pi";
-import { SlInfo } from "react-icons/sl";
+import { RiInfoI } from "react-icons/ri";
 import Image from "next/image";
 import {
   Dialog,
@@ -365,6 +365,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Star, Package, Truck, Shield, Tag } from "lucide-react";
+import { IoInformation } from "react-icons/io5";
+import { AiOutlineInfo } from "react-icons/ai";
 
 interface Review {
   rating: number;
@@ -451,7 +453,7 @@ export default function ProductCard({
             <Dialog onOpenChange={(open) => open && fetchProductDetails()}>
               <DialogTrigger asChild>
                 <div className="h-10 w-10 sm:h-11 sm:w-11 -mt-2 rounded text-xl md:text-2xl bg-transparent flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all cursor-pointer">
-                  <SlInfo />
+                  <RiInfoI />
                 </div>
               </DialogTrigger>
 
