@@ -159,7 +159,7 @@ export default function ProductCard({
                       {/* Info */}
                       <div className="space-y-4 flex flex-col justify-between">
                         <div className="space-y-5">
-                          <p className="text-lg text-gray-600">
+                          <p className="text-gray-600">
                             {details.description}
                           </p>
 
