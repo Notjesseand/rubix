@@ -56,6 +56,7 @@ export default function CategoryPage() {
                 name={product.title}
                 price={product.price}
                 image={product.thumbnail}
+                // @ts-ignore
                 product={product as any}
               />
             ))}
