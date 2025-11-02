@@ -437,20 +437,20 @@ export default function ProductCard({
         style={{ backgroundImage: `url(${image})` }}
       >
         {/* Action Buttons */}
-        <div className="absolute right-2 top-5 z-50 transition-opacity duration-300">
+        <div className="absolute right-0 top-5 z-50 transition-opacity duration-300">
           {/* 🛍 Add to Cart */}
           <div
             onClick={onAddToCart}
-            className="h-10 w-10 sm:h-11 sm:w-11 rounded text-2xl bg-white flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all shadow-md"
+            className=" h-10 w-10 sm:h-11 sm:w-11 rounded text-xl md:text-2xl bg-transparent  flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all"
           >
-            <PiHandbagLight />
+            <PiHandbagLight className="" />
           </div>
 
           {/* ℹ️ Product Info Dialog */}
-          <div className="mt-2">
+          <div className="md:mt-2">
             <Dialog onOpenChange={(open) => open && fetchProductDetails()}>
               <DialogTrigger asChild>
-                <div className="h-10 w-10 sm:h-11 sm:w-11 rounded text-2xl bg-white flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all shadow-md cursor-pointer">
+                <div className="h-10 w-10 sm:h-11 sm:w-11 -mt-2 rounded text-xl md:text-2xl bg-transparent flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all cursor-pointer">
                   <SlInfo />
                 </div>
               </DialogTrigger>
@@ -578,10 +578,10 @@ export default function ProductCard({
 
       {/* Product Info Below Card */}
       <div className="mt-2 text-center">
-        <p className="font-semibold text-lg font-montserrat line-clamp-2">
+        <p className="md:font-semibold text-sm  md:text-lg font-montserrat line-clamp-2">
           {name}
         </p>
-        <p className="font-montserrat text-lg">${price}</p>
+        <p className="font-montserrat text-sm md:text-lg">${price}</p>
       </div>
     </div>
   );
