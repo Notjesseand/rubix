@@ -41,7 +41,7 @@ const FirstNav = () => {
   }, []);
 
   return (
-    <div className="slide-in-top z-50 bg-[#ffffff] py-5 md:py-7 px-5 md:px-16 flex justify-between w-full drop-shadow-lg">
+    <div className="slide-in-top z-50 bg-[#ffffff] py-5 md:py-6 px-5 md:px-16 flex justify-between w-full drop-shadow-lg">
       {/* Logo */}
       <Link href="/">
         <h1 className="font-nunito text-3xl font-extrabold tracking-widest">
@@ -51,9 +51,15 @@ const FirstNav = () => {
 
       {/* Nav Links */}
       <div className="hidden lg:flex font-montserrat items-center gap-9">
-        <p className="cursor-pointer hover:text-[#ba933e]">Home</p>
-        <p className="cursor-pointer hover:text-[#ba933e]">Shop</p>
-        <p className="cursor-pointer hover:text-[#ba933e]">Collections</p>
+        <Link href="/">
+          <p className="cursor-pointer hover:text-[#ba933e]">Home</p>
+        </Link>
+        <Link href="/shop">
+          <p className="cursor-pointer hover:text-[#ba933e]">Shop</p>
+        </Link>
+        <Link href="/collections">
+          <p className="cursor-pointer hover:text-[#ba933e]">Collections</p>
+        </Link>
         <p className="cursor-pointer hover:text-[#ba933e]">Blogs</p>
         <p className="cursor-pointer hover:text-[#ba933e]">Contact Us</p>
       </div>

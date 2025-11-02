@@ -1,10 +1,11 @@
+// app/shop/page.tsx
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Nav from "@/components/firstNav";
 import Footer from "@/components/footer";
 import ProductCard from "@/components/productCard";
 import { IoSearchOutline } from "react-icons/io5";
+import { toast } from "sonner";
 
 interface Product {
   id: number;
@@ -68,6 +69,11 @@ export default function Page() {
 
       localStorage.setItem("cart", JSON.stringify(updatedCart));
       window.dispatchEvent(new Event("cartUpdated")); // 🔔 instantly updates navbar
+      // 🧁 Toast feedback
+      toast.success(`${product.title} added to cart 🛍`, {
+        description: "You can view it in your cart.",
+        duration: 2500,
+      });
       return updatedCart;
     });
   };

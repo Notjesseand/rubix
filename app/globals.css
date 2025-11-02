@@ -525,7 +525,7 @@
 }
 
 .container {
-  --uib-size: 40px;
+  --uib-size: 30px;
   --uib-color: black;
   --uib-speed: 1s;
   --uib-stroke: 3px;
