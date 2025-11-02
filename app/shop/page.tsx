@@ -105,7 +105,7 @@ export default function Page() {
       <Nav />
 
       {/* Search Bar */}
-      <div className="bg-white shadow-md mt-20 mx-auto w-11/12 md:w-3/4 rounded-full flex items-center px-4 py-2 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ba933e]">
+      <div className="bg-white shadow-md mt-10 sm:mt-20 mx-auto w-11/12 md:w-3/4 rounded-full flex items-center px-4 py-2 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ba933e]">
         <IoSearchOutline className="text-xl text-gray-500" />
         <input
           type="text"
