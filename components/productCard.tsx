@@ -222,7 +222,7 @@ export default function ProductCard({
                         <div>
                           <button
                             onClick={onAddToCart}
-                            className="px-5 py-2 bg-black text-white rounded mx-auto flex text-sm"
+                            className="px-5 py-2 bg-black text-white rounded mx-auto flex text-sm mt-10"
                           >
                             Add To Cart
                           </button>
