@@ -27,7 +27,7 @@
 //     >
 //       {/* Navbar content */}
 //       <Link href="/">
-      
+
 //       <h1 className="font-nunito text-2xl sm:text-3xl font-extrabold tracking-widest">
 //         RUBIX
 //       </h1>
@@ -54,7 +54,6 @@
 
 // export default Nav;
 
-
 "use client";
 
 import Link from "next/link";
@@ -75,7 +74,7 @@ const Nav = () => {
   // 🧭 Scroll visibility
   useEffect(() => {
     const handleScroll = () => {
-      setShowNavbar(window.scrollY > 100);
+      setShowNavbar(window.scrollY > 130);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

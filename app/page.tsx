@@ -22,6 +22,7 @@ import { TfiCreditCard } from "react-icons/tfi";
 import { HiOutlineReceiptRefund } from "react-icons/hi";
 import Footer from "@/components/footer";
 import Accordion from "@/components/ui/accordion";
+import BestSellerCarousel from "@/components/bestSellerCarousel";
 
 const Page = () => {
   return (
@@ -97,38 +98,8 @@ const Page = () => {
           <p className="text-center text-base sm:text-lg font-custom font-extralight text-gray-500">
             Top sale in this week
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 sm:px-12">
-            {trending.map((item, index) => (
-              <div
-                key={index}
-                className=" h-56 sm:h-80 md:h-96 w-5/6 mx-auto my-10 relative cursor-pointer"
-              >
-                <div
-                  // onMouseEnter={() => setHovered(index)}
-                  // onMouseLeave={() => setHovered(null)}
-                  style={{
-                    backgroundImage: `url(${item.image})`,
-                  }}
-                  className={`bg-contain hover:scale-95 h-full w-full flex transition-all duration-300 z-50 bg-no-repeat bg-center`}
-                >
-                  <div className="absolute right-2 cursor-pointer top-5 -z-30">
-                    {/* add to cart */}
-                    <div className="h-10 w-10 sm:h-11 sm:w-11  rounded text-2xl bg-white flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold">
-                      <PiHandbagLight />
-                    </div>
-                    {/* search */}
-                    <div className="h-10 w-10 sm:h-11 sm:w-11 mt-2 rounded text-2xl bg-white flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold">
-                      <IoSearchOutline />
-                    </div>
-                  </div>
-                </div>
-                {/* item name */}
-                <p className="font-semibold text-lg font-montserrat mt-2">
-                  {item.name}
-                </p>
-                <p className="mt-1 font-montserrat">${item.price}</p>
-              </div>
-            ))}
+          <div className="">
+          <BestSellerCarousel />
           </div>
           {/* newsletter */}
           <div className="h-screen w-full bg-fixed bg-[url(/newsletter-bg.jpg)] mt-32 flex items-center bg-cover justify-center">

@@ -244,7 +244,7 @@ export default function ProductCard({
         <p className="md:font-semibold text-sm  md:text-lg font-montserrat line-clamp-2">
           {name}
         </p>
-        <p className="font-montserrat text-sm md:text-lg">${price}</p>
+        <p className="font-montserrat text-sm md:text-lg">${price.toLocaleString()}</p>
       </div>
     </div>
   );
