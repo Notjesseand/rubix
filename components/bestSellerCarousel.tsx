@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import ProductCard from "@/components/productCard";
 import { toast } from "sonner";
 
-const bestSellerCarousel = () => {
+const BestSellerCarousel = () => {
   const [products, setProducts] = useState<any[]>([]);
   const [products2, setProducts2] = useState<any[]>([]);
 
@@ -209,4 +209,4 @@ const bestSellerCarousel = () => {
   );
 };
 
-export default bestSellerCarousel;
+export default BestSellerCarousel;

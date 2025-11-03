@@ -23,8 +23,11 @@ import { HiOutlineReceiptRefund } from "react-icons/hi";
 import Footer from "@/components/footer";
 import Accordion from "@/components/ui/accordion";
 import BestSellerCarousel from "@/components/bestSellerCarousel";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+  const router = useRouter();
+
   return (
     <div className="bg-[#f6f6f6] font-nunito transition-all duration-500 z-50">
       <Nav />
@@ -76,10 +79,12 @@ const Page = () => {
             <img
               src="trending/banner1.webp"
               className="flex full w-full cursor-pointer hover:scale-95 transitin-all duration-300"
+              onClick={() => router.push("/shop")}
             />
           </div>
           <div className="bg-[#484946]">
             <img
+              onClick={() => router.push("/shop")}
               src="trending/banner2.webp"
               className="flex full w-full cursor-pointer hover:scale-95 transitin-all duration-300"
             />
@@ -87,6 +92,7 @@ const Page = () => {
         </div>
         {/* chair banner */}
         <img
+          onClick={() => router.push("/shop")}
           src="banner6.webp"
           className=" h-auto w-full mt-10 px-4 cursor-pointer hover:scale-95 transition-all duration-500"
         />
@@ -99,7 +105,7 @@ const Page = () => {
             Top sale in this week
           </p>
           <div className="">
-          <BestSellerCarousel />
+            <BestSellerCarousel />
           </div>
           {/* newsletter */}
           <div className="h-screen w-full bg-fixed bg-[url(/newsletter-bg.jpg)] mt-32 flex items-center bg-cover justify-center">
