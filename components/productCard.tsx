@@ -83,7 +83,7 @@ export default function ProductCard({
   };
 
   return (
-    <div className="h-56 sm:h-80 md:h-96 w-5/6 mx-auto relative cursor-pointer group transition-all duration-300">
+    <div className="h-44 sm:h-72 md:h-80 w-5/6 mx-auto relative  cursor-pointer group transition-all duration-300">
       <div
         className="bg-contain bg-no-repeat bg-center h-full w-full flex transition-all duration-300 group-hover:scale-95"
         style={{ backgroundImage: `url(${image})` }}
@@ -240,7 +240,7 @@ export default function ProductCard({
       </div>
 
       {/* Product Info Below Card */}
-      <div className="mt-2 text-center">
+      <div className="mt-0 sm:mt-2 text-center">
         <p className="md:font-semibold text-sm  md:text-lg font-montserrat line-clamp-2">
           {name}
         </p>
