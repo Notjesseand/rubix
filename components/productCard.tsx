@@ -93,7 +93,7 @@ export default function ProductCard({
           {/* 🛍 Add to Cart */}
           <div
             onClick={onAddToCart}
-            className=" h-10 w-10 sm:h-11 sm:w-11 rounded text-xl md:text-2xl bg-transparent  flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all"
+            className=" h-10 w-10 rounded text-xl md:text-2xl bg-transparent  flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all"
           >
             <PiHandbagLight className="" />
           </div>
@@ -102,7 +102,7 @@ export default function ProductCard({
           <div className="md:mt-2">
             <Dialog onOpenChange={(open) => open && fetchProductDetails()}>
               <DialogTrigger asChild>
-                <div className="h-10 w-10 sm:h-11 sm:w-11 -mt-5 rounded text-xl md:text-2xl bg-transparent flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all cursor-pointer">
+                <div className="h-10 w-10 sm:h-10 sm:w-10 -mt-4   rounded text-xl md:text-2xl bg-transparent flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all cursor-pointer">
                   {/* <RiInfoI /> */}
                   <FaRegEye />
                 </div>
@@ -240,7 +240,7 @@ export default function ProductCard({
       </div>
 
       {/* Product Info Below Card */}
-      <div className="-mt-1 sm:mt-2 text-center">
+      <div className="-mt-6 md:-mt-16 text-center">
         <p className="md:font-semibold text-sm  md:text-lg font-montserrat line-clamp-2">
           {name}
         </p>
