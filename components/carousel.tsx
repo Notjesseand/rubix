@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 // Import Swiper styles
 import "swiper/css";
@@ -44,6 +45,8 @@ const Carousel = () => {
     hidden: { opacity: 0, y: -150 },
     visible: { opacity: 1, y: 0 },
   };
+
+  const router = useRouter();
 
   const pagination = {
     clickable: true,
@@ -130,6 +133,7 @@ const Carousel = () => {
             >
               <div>
                 <button
+                  onClick={() => router.push("/shop")}
                   className={`bg-black text-white rounded px-12 py-3 flex items-center font-montserrat font-semibold ${
                     isvisible3 ? "shake-horizontal" : ""
                   }`}
@@ -186,6 +190,7 @@ const Carousel = () => {
           >
             {/* <div> */}
             <button
+              onClick={() => router.push("/shop")}
               className={`bg-black text-white rounded px-12 py-3 flex items-center font-montserrat font-semibold ${
                 isvisiblem3 ? "shake-horizontal" : ""
               }`}
@@ -245,6 +250,7 @@ const Carousel = () => {
             >
               <div>
                 <button
+                  onClick={() => router.push("/shop")}
                   className={`bg-black text-white rounded px-12 py-3 flex items-center font-montserrat font-semibold bounce-left ${
                     isvisible6 ? "bounce-top" : ""
                   }`}
@@ -302,6 +308,7 @@ const Carousel = () => {
           >
             {/* <div> */}
             <button
+              onClick={() => router.push("/shop")}
               className={`bg-black text-white rounded px-12 py-3 flex items-center font-montserrat font-semibold ${
                 isvisiblem6 ? "shake-horizontal" : ""
               }`}
@@ -360,6 +367,7 @@ const Carousel = () => {
             >
               <div>
                 <button
+                  onClick={() => router.push("/shop")}
                   className={`bg-black text-white rounded px-12 py-3 flex items-center font-montserrat font-semibold ${
                     isvisible9 ? "shake-horizontal" : ""
                   }`}
@@ -416,6 +424,7 @@ const Carousel = () => {
           >
             {/* <div> */}
             <button
+              onClick={() => router.push("/shop")}
               className={`bg-black text-white rounded px-12 py-3 flex items-center font-montserrat font-semibold ${
                 isvisiblem6 ? "shake-horizontal" : ""
               }`}
