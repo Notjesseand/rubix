@@ -119,7 +119,7 @@ export default function Page() {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 px-3 gap-y-2 sm:gap-y-6 sm:px-6 py-6 sm:py-10">
+      <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-6 px-3 gap-y-2 sm:gap-y-4 sm:px-6 py-6 sm:py-10">
         {products.length > 0 ? (
           products.map((product) => (
             <ProductCard
