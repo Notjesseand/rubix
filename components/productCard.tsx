@@ -102,7 +102,7 @@ export default function ProductCard({
           <div className="md:mt-2">
             <Dialog onOpenChange={(open) => open && fetchProductDetails()}>
               <DialogTrigger asChild>
-                <div className="h-10 w-10 sm:h-11 sm:w-11 -mt-2 rounded text-xl md:text-2xl bg-transparent flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all cursor-pointer">
+                <div className="h-10 w-10 sm:h-11 sm:w-11 -mt-5 rounded text-xl md:text-2xl bg-transparent flex justify-center items-center hover:bg-[#BA933E] hover:text-white font-extrabold transition-all cursor-pointer">
                   {/* <RiInfoI /> */}
                   <FaRegEye />
                 </div>
