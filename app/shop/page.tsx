@@ -1,11 +1,12 @@
 // app/shop/page.tsx
 "use client";
 import React, { useEffect, useState } from "react";
-import Nav from "@/components/firstNav";
+import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import ProductCard from "@/components/productCard";
 import { IoSearchOutline } from "react-icons/io5";
 import { toast } from "sonner";
+import FirstNav from "@/components/firstNav";
 
 interface Product {
   id: number;
@@ -103,9 +104,9 @@ export default function Page() {
   return (
     <div className="font-custom">
       <Nav />
-
+     <FirstNav />
       {/* Search Bar */}
-      <div className="bg-white shadow-md mt-10 sm:mt-20 mx-auto w-11/12 md:w-3/4 rounded-full flex items-center px-4 py-2 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ba933e]">
+      <div className="bg-white shadow-md mt-10 sm:mt-14 mx-auto w-11/12 md:w-3/4 rounded-full flex items-center px-4 py-2 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#ba933e]">
         <IoSearchOutline className="text-xl text-gray-500" />
         <input
           type="text"
@@ -118,7 +119,7 @@ export default function Page() {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 px-3 gap-y-24 sm:px-6 py-14">
+      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 px-3 gap-y-24 sm:px-6 py-6 sm:py-10">
         {products.length > 0 ? (
           products.map((product) => (
             <ProductCard

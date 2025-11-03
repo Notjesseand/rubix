@@ -2,10 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Nav from "@/components/firstNav";
+import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import { IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
+import FirstNav from "@/components/firstNav";
 
 export default function CollectionsPage() {
   const [categories, setCategories] = useState<any[]>([]);
@@ -31,6 +32,7 @@ export default function CollectionsPage() {
   return (
     <div className="font-montserrat">
       <Nav />
+      <FirstNav />
 
       <div className="mt-20 mb-16 px-6 md:px-20 pb-14">
         <h1 className="text-2xl md:text-4xl font-bold mb-8 text-center font-montserrat py-4">

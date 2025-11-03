@@ -56,7 +56,7 @@ const Footer = () => {
       <div className="grid md:grid-cols-4 pt-6 sm:pt-0 gap-x-4">
         {/* rubix logo , 1/4*/}
         <div>
-          <p className="font-bold text-xl sm:text-3xl text-white font-montserrat">
+          <p className="font-bold text-xl sm:text-3xl text-white font-script ">
             RUBIX
           </p>
           <div className="flex text-white text-xl sm:text-3xl gap-x-4 sm:justify-between mt-6 pr-6 sm:max-w-[50vw]">

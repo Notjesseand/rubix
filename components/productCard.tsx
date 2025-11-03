@@ -89,7 +89,7 @@ export default function ProductCard({
         style={{ backgroundImage: `url(${image})` }}
       >
         {/* Action Buttons */}
-        <div className="absolute right-0 top-5 z-50 transition-opacity duration-300">
+        <div className="absolute right-0 top-5  transition-opacity duration-300">
           {/* 🛍 Add to Cart */}
           <div
             onClick={onAddToCart}
@@ -159,9 +159,7 @@ export default function ProductCard({
                       {/* Info */}
                       <div className="space-y-4 flex flex-col justify-between">
                         <div className="space-y-5">
-                          <p className="text-gray-600">
-                            {details.description}
-                          </p>
+                          <p className="text-gray-600">{details.description}</p>
 
                           <div className="flex items-center gap-3">
                             <span className="text-3xl font-bold">

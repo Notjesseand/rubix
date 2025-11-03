@@ -25,7 +25,7 @@ import Accordion from "@/components/ui/accordion";
 
 const Page = () => {
   return (
-    <div className="bg-[#f6f6f6] font-nunito transition-all duration-500">
+    <div className="bg-[#f6f6f6] font-nunito transition-all duration-500 z-50">
       <Nav />
       <div className="py-2 bg-[#f5f5f5] xl:grid grid-cols-3 px-2 md:px-8 items-center justify-between text-sm">
         <div className="hidden xl:flex items-center ">
