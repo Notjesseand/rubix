@@ -51,18 +51,7 @@ const Carousel = () => {
   const pagination = {
     clickable: true,
 
-    // renderBullet: function (index: any, className: any) {
-    //   // Return a span with Tailwind classes for the bullet
-    //   return `
-    // <div
-    //   class="${className} w-10 h-10 rounded-full border-4 border-[#ba933e] bg-[#ba933e] mx-2 text-black  ${
-    //     className.includes("swiper-pagination-bullet-active")
-    //       ? "bg-transparent" // Active bullet has hollow circle
-    //       : "bg-[#ba933e]" // Inactive bullets have a filled circle
-    //   }">
-    // </div>`;
-    // },
-    renderBullet: function (index: any, className: any) {
+      renderBullet: function (index: any, className: any) {
       // Return a span with Tailwind classes for the bullet
       return `
         <div 
@@ -385,7 +374,7 @@ const Carousel = () => {
             ref={refm7}
             initial="hidden"
             animate={isvisiblem7 ? "visible" : "hidden"}
-            variants={variants}
+            variants={variant2}
             transition={{ duration: 0.1, delay: 0.2 }}
           >
             <p
@@ -402,7 +391,7 @@ const Carousel = () => {
             ref={refm8}
             initial="hidden"
             animate={isvisiblem8 ? "visible" : "hidden"}
-            variants={variants}
+            variants={variant2}
             transition={{ duration: 0.1, delay: 0.5 }}
           >
             <p
@@ -410,7 +399,7 @@ const Carousel = () => {
                 isvisiblem8 ? "bounce-right2" : ""
               }`}
             >
-              Everyone&apos;s Talking About Sweeper and Funnel
+              Wood Minimal Office Chair <br /> Extra 40% off
             </p>
           </motion.div>
           <motion.div
@@ -418,7 +407,7 @@ const Carousel = () => {
             ref={refm9}
             initial="hidden"
             animate={isvisiblem9 ? "visible" : "hidden"}
-            variants={variants}
+            variants={variant2}
             transition={{ duration: 0.1, delay: 1 }}
             // className="bounce-right"
           >
