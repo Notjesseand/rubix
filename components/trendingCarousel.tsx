@@ -83,7 +83,7 @@ const TrendingCarousel = () => {
         }}
         loop={true}
         breakpoints={{
-          308: { slidesPerView: 3 },
+          308: { slidesPerView: 2 },
           720: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
         }}
