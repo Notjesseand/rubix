@@ -51,7 +51,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className=" bg-[#1a1a1a] mt-20 px-6 sm:px-10 sm:pt-10 text-white font-montserrat pb-10">
+    <div className=" bg-[#1a1a1a] mt-32 sm:mt-20 px-6 sm:px-10 sm:pt-10 text-white font-montserrat pb-10">
       {/* PC */}
       <div className="grid md:grid-cols-4 pt-6 sm:pt-0 gap-x-4">
         {/* rubix logo , 1/4*/}
