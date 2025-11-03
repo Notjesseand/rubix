@@ -240,7 +240,7 @@ export default function ProductCard({
       </div>
 
       {/* Product Info Below Card */}
-      <div className="-mt-6 md:-mt-16 text-center">
+      <div className="-mt-6 md:-mt-8 text-center">
         <p className="md:font-semibold text-sm  md:text-lg font-montserrat line-clamp-2">
           {name}
         </p>
