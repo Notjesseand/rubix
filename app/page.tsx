@@ -24,6 +24,9 @@ import Footer from "@/components/footer";
 import Accordion from "@/components/ui/accordion";
 import BestSellerCarousel from "@/components/bestSellerCarousel";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { blogPosts } from "./blogs/page";
 
 const Page = () => {
   const router = useRouter();
@@ -99,7 +102,7 @@ const Page = () => {
         {/* best seller products */}
         <div className="pt-10">
           <p className="text-center font-montserrat font-semibold text-3xl my-2 sm:my-4">
-            Best Seller Products
+            Best Selling Products
           </p>
           <p className="text-center text-base sm:text-lg font-custom font-extralight text-gray-500">
             Top sale in this week
@@ -108,159 +111,153 @@ const Page = () => {
             <BestSellerCarousel />
           </div>
           {/* newsletter */}
-          <div className="h-screen w-full bg-fixed bg-[url(/newsletter-bg.jpg)] mt-32 flex items-center bg-cover justify-center">
-            <div className="w-11/12 sm:w-3/4 bg-white bg-opacity-85 py-14 rounded-sm pt-10 p-3">
-              <p className="text-center text-[25px] font-bold font-custom pt-5">
-                Subcribe To Our Newsletter
-              </p>
-              <p className="mt-3 font-montserrat text-center">
-                Sign up for the weekly newsletter and build better ecommerce
-                stores.
-              </p>
+          <div className="relative w-full mt-32 bg-fixed bg-[url(/newsletter-bg.jpg)] bg-cover md:bg-center">
+            {/* Overlay for readability */}
+            <div className="absolute inset-0 bg-black bg-opacity-40" />
 
-              {/* form */}
-              <div className="w-3/4 mx-auto sm:flex pt-12 gap-4">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="enter your email address..."
-                  className="w-full py-2 sm:py-3 px-2 sm:px-4 border-[#e3e3e3] border-[2.5px] rounded-lg placeholder:font-montserrat outline-[#ba933e] font-montserrat"
-                />
-                <button className="px-10 rounded-lg bg-black text-white bg-opacity-75 flex sm:inline mx-auto">
-                  Subscribe
-                </button>
+            <div className="relative flex items-center justify-center min-h-[60vh] sm:min-h-[70vh] px-4">
+              <div className="w-full max-w-2xl bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-6 sm:p-10">
+                <h2 className="text-center text-2xl sm:text-3xl font-bold font-custom text-gray-900">
+                  Subscribe to Our Newsletter
+                </h2>
+
+                <p className="mt-3 text-center text-gray-600 font-montserrat text-sm sm:text-base">
+                  Get weekly updates, exclusive offers, and eCommerce tips
+                  straight to your inbox.
+                </p>
+
+                {/* Form */}
+                <form className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email address..."
+                    className="flex-1 py-3 px-4 border-2 border-gray-200 rounded-lg text-gray-700 placeholder:text-gray-400 placeholder:font-montserrat focus:outline-none focus:border-[#ba933e] transition-all duration-200"
+                  />
+                  <button
+                    type="submit"
+                    className="py-3 px-6 rounded-lg bg-[#ba933e] text-white font-semibold hover:bg-[#a78435] transition-all duration-300 shadow-md active:scale-95"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+
+                <p className="text-center mt-6 text-xs sm:text-sm text-gray-500 font-montserrat">
+                  We respect your privacy. Unsubscribe anytime.
+                </p>
               </div>
-              <p className="text-center mt-8 font-montserrat pb-5 text-sm">
-                We respect your privacy, so we never share your info.
-              </p>
             </div>
           </div>
+
           {/*  */}
-          <div className="grid md:grid-cols-3 gap-2 bg-slate-50 px-6 font-custom mt-10">
-            <div className=" py-8 text-center justify-center bg-white">
-              <IoAirplaneOutline className="text-5xl text-center flex mt-10 mx-auto" />
-              <p className="mt-2 font-semibold text-base">
-                Free Wordwide Shipping
-              </p>
-              <p className="font-montserrat mt-2 text-sm">
-                On all orders above $75.00
-              </p>
-              <p className="mt-2 sm:mt-4 text-[15px] flex text-center justify-center items-center cursor-pointer">
-                Learn more <SlArrowRight className="text-lg" />
-              </p>
-            </div>
-            <div className="bg-white py-6 text-center justify-center ">
-              <TfiCreditCard className="text-5xl text-center flex mt-10 mx-auto" />
-              <p className="mt-2 font-semibold text-base">
-                100% secure payment
-              </p>
-              <p className="font-montserrat mt-2 text-sm">
-                We secure payment wth PEV
-              </p>
-              <p className="mt-2 sm:mt-4 text-[15px] flex text-center justify-center items-center cursor-pointer">
-                Learn more <SlArrowRight className="text-lg" />
-              </p>
-            </div>
-            <div className="bg-white py-6 text-center justify-center">
-              <HiOutlineReceiptRefund className="text-5xl text-center flex mt-10 mx-auto" />
-              <p className="mt-2 font-semibold text-base">30 Days Return</p>
-              <p className="font-montserrat mt-2 text-sm">
-                Return it within 20 day for an exchange
-              </p>
-              <p className="mt-2 sm:mt-4 text-[15px] flex text-center justify-center items-center cursor-pointer">
-                Learn more <SlArrowRight className="text-lg" />
-              </p>
-            </div>
-          </div>
-          {/* From our Blogs */}
-          <p className="pt-10 sm:pt-24 font-bold font-montserrat text-3xl text-center">
-            From Our Blog
-          </p>
-          <p className="text-center mt-1 text-sm sm:mt-2 font-montserrat">
-            Read our curated library of blogposts
-          </p>
+          <div className="bg-slate-50 px-4 sm:px-8 py-12 font-custom mt-10">
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  icon: (
+                    <IoAirplaneOutline className="text-4xl sm:text-5xl text-[#ba933e]" />
+                  ),
+                  title: "Free Worldwide Shipping",
+                  subtitle: "On all orders above $75.00",
+                },
+                {
+                  icon: (
+                    <TfiCreditCard className="text-4xl sm:text-5xl text-[#ba933e]" />
+                  ),
+                  title: "100% Secure Payment",
+                  subtitle: "We secure payment with PEV",
+                },
+                {
+                  icon: (
+                    <HiOutlineReceiptRefund className="text-4xl sm:text-5xl text-[#ba933e]" />
+                  ),
+                  title: "30 Days Return",
+                  subtitle: "Return it within 30 days for an exchange",
+                },
+              ].map((feature, index) => (
+                <div
+                  key={index}
+                  className="group bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 py-10 px-6 flex flex-col items-center text-center"
+                >
+                  {/* Icon with circle background */}
+                  <div className="flex items-center justify-center w-20 h-20 rounded-full bg-[#f9f5ef] mb-6 group-hover:bg-[#ba933e]/10 transition-all duration-300">
+                    {feature.icon}
+                  </div>
 
-          <div className="grid lg:grid-cols-3 px-5 sm:px-10 pt-12 gap-2 lg:gap-x 4 gap-y-6">
-            <div className="">
-              <img
-                src="/blog1.webp"
-                alt="blog"
-                className="w-full max-h-[60vh] object-cover"
-              />
-              <button className="bg-[#ba933e] px-2 py-0.5 rounded text-white capitalize text-sm md:text-base mt-4 font-bold font-montserrat">
-                Lifestyle
-              </button>
-              <div className="">
-                <p className="font-semibold text-[15px] mt-2">
-                  Mr. Haalandd E.
-                </p>{" "}
-                <p className="text-lg font-bold mt-2">
-                  {" "}
-                  Top 5 Essential Tools for Front-End Developers in 2024
-                </p>
-                <p className="font-montserrat font-[450] text-sm mt-1">
-                  Explore the most effective tools and frameworks for front-end
-                  development, including popular options like React, Next.js,
-                  and Tailwind CSS. Highlight why each tool is essential and how
-                  it can streamline workflow.
-                </p>
-              </div>
-              <button className=" px-5 py-2 border-[2.5px] text-sm flex gap-2 items-center mt-4 font-custom border-[#d1d1d1] rounded ">
-                Read More <SlArrowRight />
-              </button>
-            </div>
-            {/* blog 2 */}
-            <div className="">
-              <img src="/blog2.webp" alt="blog" className="w-full" />
-              <button className="bg-[#ba933e] px-2 py-0.5 rounded text-white capitalize text-sm md:text-base mt-4 font-bold font-montserrat">
-                Tech
-              </button>
-              <div className="">
-                <p className="font-semibold text-[15px] mt-2">Mr. Jesse N.</p>{" "}
-                <p className="text-lg font-bold mt-2">
-                  How to Optimize Your Website for Better Performance: A
-                  Developer&apos;s Guide
-                </p>
-                <p className="font-montserrat font-[450] text-sm mt-1">
-                  Discuss key techniques to enhance website performance, such as
-                  lazy loading, code splitting, and optimizing images. Provide
-                  actionable tips for reducing load times and improving user
-                  experience.
-                </p>
-              </div>
-              <button className=" px-5 py-2 border-[2.5px] text-sm flex gap-2 items-center mt-4 font-custom border-[#d1d1d1] rounded ">
-                Read More <SlArrowRight />
-              </button>
-            </div>
-            {/* blog 3 */}
-            <div className="">
-              <img
-                src="/blog3.webp"
-                alt="blog"
-                className="w-full max-h-[60vh] object-cover"
-              />
-              <button className="bg-[#ba933e] px-2 py-0.5 rounded text-white capitalize text-sm md:text-base mt-4 font-bold font-montserrat">
-                Design
-              </button>
-              <div className="">
-                <p className="font-semibold text-[15px] mt-2">Mr. Thugger</p>{" "}
-                <p className="text-lg font-bold mt-2">
-                  Mastering CSS Grid and Flexbox: A Beginner&apos;s Guide to
-                  Modern Layouts
-                </p>
-                <p className="font-montserrat font-[450] text-sm mt-1">
-                  Provide a comparison of CSS Grid and Flexbox, explaining when
-                  and how to use each for modern web layouts. Include practical
-                  examples and tips to help developers create responsive,
-                  flexible designs.
-                </p>
-              </div>
-              <button className=" px-5 py-2 border-[2.5px] text-sm flex gap-2 items-center mt-4 font-custom border-[#d1d1d1] rounded ">
-                Read More <SlArrowRight />
-              </button>
+                  <h3 className="font-semibold text-lg sm:text-xl text-gray-800">
+                    {feature.title}
+                  </h3>
+
+                  <p className="font-montserrat text-sm text-gray-600 mt-2">
+                    {feature.subtitle}
+                  </p>
+
+                  <button className="mt-4 flex items-center gap-2 text-[#ba933e] hover:text-black text-sm font-medium transition-all duration-300">
+                    Learn more <SlArrowRight className="text-base" />
+                  </button>
+                </div>
+              ))}
             </div>
           </div>
+
+          {/* From Our Blog Section */}
+          <section className="mt-16 sm:mt-24 px-5 sm:px-10">
+            <h2 className="font-bold font-montserrat text-3xl text-center">
+              From Our Blog
+            </h2>
+            <p className="text-center mt-2 text-gray-600 font-montserrat text-sm sm:text-base">
+              Read our curated library of blog posts
+            </p>
+
+            {/* Blog Grid */}
+            <div className="grid gap-8 pt-12 md:grid-cols-2 lg:grid-cols-3">
+              {blogPosts.map((post, index) => (
+                <motion.div
+                  key={post.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
+                >
+                  {/* Blog Image */}
+                  <div className="relative w-full h-56 sm:h-64">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+
+                  {/* Blog Content */}
+                  <div className="p-5 flex flex-col flex-grow">
+                    <div className="flex items-center justify-between text-xs text-gray-400 mb-2">
+                      <span>{post.date}</span>
+                      <span>{post.author}</span>
+                    </div>
+
+                    <button className="bg-[#ba933e] text-white text-xs sm:text-sm px-3 py-1 rounded-full w-fit mb-3 capitalize font-semibold">
+                      {post.tags[0]}
+                    </button>
+
+                    <h3 className="text-lg sm:text-xl font-bold font-montserrat mb-2 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 font-montserrat text-sm line-clamp-3 mb-4">
+                      {post.excerpt}
+                    </p>
+
+                    <Link
+                      href={`/blogs/${post.id}`}
+                      className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#ba933e] hover:text-black transition-all duration-200"
+                    >
+                      Read More <SlArrowRight className="text-base" />
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </section>
         </div>
       </div>
       <Footer />

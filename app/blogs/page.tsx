@@ -1,3 +1,4 @@
+// app/blogs/page.tsx
 "use client";
 import Nav from "@/components/firstNav";
 import Footer from "@/components/footer";
@@ -15,7 +16,7 @@ interface BlogPost {
   tags: string[];
 }
 
-const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Transform Your Living Room with Minimalist Furniture",
