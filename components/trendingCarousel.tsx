@@ -10,6 +10,7 @@ import { toast } from "sonner";
 
 const TrendingCarousel = () => {
   const [products, setProducts] = useState<any[]>([]);
+  const [products2, setProducts2] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   const pagination = {
@@ -32,8 +33,13 @@ const TrendingCarousel = () => {
         const res = await fetch(
           "https://dummyjson.com/products/category/motorcycle"
         );
+        const res2 = await fetch(
+          "https://dummyjson.com/products/category/mens-shoes"
+        );
         const data = await res.json();
+        const data2 = await res2.json();
         setProducts(data.products || []);
+        setProducts2(data2.products || []);
       } catch (error) {
         console.error("Error fetching trending products:", error);
       } finally {
@@ -92,6 +98,68 @@ const TrendingCarousel = () => {
         className="mySwiper"
       >
         {products.map((item, index) => (
+          <SwiperSlide key={index} className="pb-24">
+            <ProductCard
+              id={item.id}
+              name={item.title}
+              price={item.price}
+              image={item.thumbnail}
+              onAddToCart={() => handleAddToCart(item)}
+            />
+          </SwiperSlide>
+        ))}
+
+        {/* Navigation arrows */}
+        <div className="custom-prev absolute left-3 sm:left-0 border-2 border-[#ba933e] top-1/2 transform -translate-y-1/2 bg-white text-black p-1 rounded-full cursor-pointer z-50 hover:bg-[#ba933e] hover:text-white">
+          <svg
+            className="w-4 h-4 sm:w-7 sm:h-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </div>
+
+        <div className="custom-next absolute right-3 sm:right-0 top-1/2 transform border-2 border-[#ba933e] -translate-y-1/2 bg-white text-black p-1 rounded-full cursor-pointer z-50 hover:bg-[#ba933e] hover:text-white">
+          <svg
+            className="w-4 h-4 sm:w-7 sm:h-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </div>
+      </Swiper>
+
+      <Swiper
+        pagination={pagination}
+        navigation={{
+          nextEl: ".custom-next",
+          prevEl: ".custom-prev",
+        }}
+        loop={true}
+        breakpoints={{
+          308: { slidesPerView: 2 },
+          720: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        modules={[Pagination, Autoplay, Navigation]}
+        className="mySwiper"
+      >
+        {products2.map((item, index) => (
           <SwiperSlide key={index} className="pb-24">
             <ProductCard
               id={item.id}
