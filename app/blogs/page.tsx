@@ -16,7 +16,7 @@ interface BlogPost {
   tags: string[];
 }
 
-export const blogPosts: BlogPost[] = [
+ const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Transform Your Living Room with Minimalist Furniture",

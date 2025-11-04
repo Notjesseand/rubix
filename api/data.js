@@ -48,3 +48,28 @@ export const trending = [
     price: "60.00",
   },
 ];
+
+export const blogPosts = [
+  {
+    id: 1,
+    title: "Transform Your Living Room with Minimalist Furniture",
+    excerpt:
+      "Discover how clean lines, neutral tones, and smart layouts can completely redefine your living room aesthetic. Learn how to blend comfort and modern elegance effortlessly.",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
+    date: "October 15, 2025",
+    author: "Interior by Studio Lux",
+    tags: ["design", "furniture", "minimalism"],
+  },
+  {
+    id: 2,
+    title: "The Art of Choosing Timeless Pieces",
+    excerpt:
+      "Quality over quantity — learn how to identify furniture that lasts a lifetime. From solid wood craftsmanship to sustainable materials, find the pieces that never go out of style.",
+    image:
+      "https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=900&q=80",
+    date: "September 22, 2025",
+    author: "Olivia Grace",
+    tags: ["lifestyle", "home decor", "sustainability"],
+  },
+];

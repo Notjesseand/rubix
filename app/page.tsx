@@ -26,7 +26,7 @@ import BestSellerCarousel from "@/components/bestSellerCarousel";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { blogPosts } from "./blogs/page";
+import { blogPosts } from "@/api/data";
 
 const Page = () => {
   const router = useRouter();
