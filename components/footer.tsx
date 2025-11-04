@@ -152,7 +152,7 @@ import Accordion from "./ui/accordion";
 const Footer = () => {
   const informationCompany = [
     {
-      title: "Information Company",
+      title: "eCommerce Company",
       content: [
         "Your Account",
         "Track Your Order",
