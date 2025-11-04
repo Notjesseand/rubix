@@ -111,7 +111,7 @@ const Page = () => {
             <BestSellerCarousel />
           </div>
           {/* newsletter */}
-          <div className="relative w-full mt-32 bg-fixed bg-[url(/newsletter-bg.jpg)] bg-cover md:bg-center">
+          <div className="relative w-full mt-32 sm:bg-fixed bg-[url(/newsletter-bg.jpg)] bg-cover md:bg-center">
             {/* Overlay for readability */}
             <div className="absolute inset-0 bg-black bg-opacity-40" />
 
